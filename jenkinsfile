@@ -11,6 +11,7 @@ pipeline {
         stage('Compile'){
             steps{
                 script{
+                    sh 'ng config -g cli.warnings.versionMismatch false'
                     sh 'ng build'
                 }
             }
